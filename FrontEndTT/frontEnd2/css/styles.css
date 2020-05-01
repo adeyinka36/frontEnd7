@@ -16,7 +16,7 @@ li{
     font-family: 'Abel', sans-serif;
 }
 header{
-    width:100vw;
+    width:100%;
 }
 h1,h2{
     font-family: 'Lato', sans-serif;
@@ -38,7 +38,7 @@ img{
 
 .intro{
     text-align: center;
-    width:100vw;
+    width:100%;
 }
 
 .intro p{
@@ -216,11 +216,11 @@ a{
  }
 
 footer {
-    width: 100vw;
+    width: 100%;
 }
 
 main h2{
-    width: 100vw;
+    width: 100%;
 }
 
 

@@ -1,0 +1,228 @@
+*{
+margin:0;
+padding:0;
+    box-sizing: border-box;
+}
+
+/* mobile phone styling */
+
+
+p{
+    font-family: 'Abel', sans-serif;
+}
+
+li{
+    font-family: 'Abel', sans-serif;
+}
+header{
+    width:100vw;
+}
+h1,h2{
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    text-align: center;
+    padding:10px 20px;
+}
+nav li{
+    text-align: center;
+    margin-top:17px;
+    margin-bottom:17px;
+}
+
+img{
+    display:inline-block;
+    width:70%;
+    
+}
+
+.intro{
+    text-align: center;
+    width:100vw;
+}
+
+.intro p{
+    margin-top:10px;
+}
+header p{
+    text-align: center;
+}
+
+.projects{
+    text-align: center;
+}
+
+.projects h3,.projects p{
+    margin-top:9px;
+    margin-bottom:9px;
+}
+
+
+aside{
+    margin-top: 150px;
+    text-align:center ;
+}
+
+
+h3{
+    font-family: 'Lato', sans-serif;
+}
+h3, aside p{
+    margin-top:20px;
+}
+
+footer li{
+    list-style-type: none;
+}
+.go_up{
+    float:right;
+}
+.name{
+    float:left;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.bot_nav{
+    display: none;
+}
+
+/* styling for 768px */
+
+@media (min-width:768px){
+    nav li{
+        display:inline-block;
+        margin-right:10px;
+        margin-bottom:40px;
+    }
+    nav ul{
+        text-align: center;
+    
+    }
+
+
+    .intro img{
+        float:right;
+        width:35%;
+        height:100%;
+        padding-top: 3em;
+
+    
+
+    }
+
+    .into p{
+        
+        float:left;
+        
+    }
+
+    .intro_p{
+        width: 35%;
+        padding-top:10%;
+        
+    
+    }
+.intro{
+    padding-left: 9em;
+    padding-right:11em;
+}
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+      section{
+        column-count: 2;
+    }
+
+    #portfolio{
+        margin-bottom: 4em;
+    }
+
+    
+    
+    .fl{
+        display: block;
+        float:right;
+        margin-right: 2.5em;
+    }
+}
+
+
+
+/* styles for 1024px */
+
+@media (min-width:1024px){
+    nav li{
+        display:inline-block;
+        margin-right:10px;
+        margin-bottom:40px;
+    }
+    nav ul{
+        text-align: center;
+    
+    }
+
+
+    h1{
+        margin-left: 1.5em;
+        width:400px;
+        display:inline-block;
+        
+    }
+
+    header nav{
+        display: inline-block;
+        width: 600px;
+        margin-left: 15em;
+        
+    }
+
+    header ul{
+        margin-left:16em;
+    }
+
+    
+
+
+      section{
+        column-count: 3;
+    }
+
+    #portfolio{
+        margin-top:4em;
+        margin-bottom: 5em;
+    }
+
+    
+    
+    .fl{
+        display: block;
+        float:right;
+        margin-right: 2.5em;
+    }
+
+
+}
+
+
+/* main{
+    text-align:center;
+}
+#portfolio{
+    margin-top: 7em;
+    margin-bottom:7em;
+} */
+
+
+/* .projects{
+    height:20em;
+    width:40%;
+    display: inline-block;
+}
+ */

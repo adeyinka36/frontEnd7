@@ -4,6 +4,7 @@ padding:0;
     box-sizing: border-box;
 }
 
+
 /* mobile phone styling */
 
 
@@ -105,7 +106,7 @@ a{
 
     .intro img{
         float:right;
-        width:35%;
+        width:45%;
         height:100%;
         padding-top: 3em;
 
@@ -120,7 +121,7 @@ a{
     }
 
     .intro_p{
-        width: 35%;
+        width: 45%;
         padding-top:10%;
         
     
@@ -150,6 +151,9 @@ a{
         display: block;
         float:right;
         margin-right: 2.5em;
+    }
+    .go_up{
+        display: none;
     }
 }
 
@@ -207,7 +211,21 @@ a{
         margin-right: 2.5em;
     }
 
+ .go_up{
+     display: none;
+ }
 
+footer {
+    width: 100vw;
+}
+
+main h2{
+    width: 100vw;
+}
+
+
+
+ 
 }
 
 

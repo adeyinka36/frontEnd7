@@ -29,6 +29,8 @@ li a {
     color:black;
 }
 
+
+
 /* mobile phone styling */
 
 header{
@@ -114,6 +116,10 @@ a{
 
 .bot_nav{
     display: none;
+}
+
+.intro img{
+    margin-bottom:2rem;
 }
 
 /* styling for 768px */

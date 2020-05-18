@@ -3,7 +3,7 @@
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
-    @include query(768px){
+    @include query($media){
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
@@ -17,7 +17,7 @@
         transition: 
           background-color .2s ease-in-out, 
           color .2s ease-in-out;
-        @include query(768px){
+        @include query($media){
             flex-basis: 100px;
         }
     }

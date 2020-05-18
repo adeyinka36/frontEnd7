@@ -6,12 +6,12 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
-    @include query(768px){
+    @include query($media){
       padding: 10px 30px;
     }
   }
   
-  @include query(768px){
+  @include query($media){
     .btn + .btn {
       margin-left: 10px;
     }
@@ -36,7 +36,7 @@
     background-color: $theme-col-2;
   }
   
-  @include query(768px){
+  @include query($media){
     .logo {
     margin-left: initial;
     margin-right: initial;
@@ -51,6 +51,6 @@
     transition: 0.3s ease-in;
   }
   #{$button}:hover {
-    background-color: lighten($col, 15%);
+    background-color:lighten($col, 15%);
   }
 }

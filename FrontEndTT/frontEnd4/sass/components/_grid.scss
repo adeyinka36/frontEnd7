@@ -1,0 +1,138 @@
+.container {
+    padding: 0 10px;
+    @include  query(768px){
+      max-width: 1400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include query(768px){
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+    @include query(768px){
+      flex-direction: row;
+  
+    }
+  }
+  
+  [class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    @include query(768px){
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+    }
+  }
+
+  @include query(768px){
+    [class^=col] + [class^=col] {
+      margin-left: 10px;
+    }
+  }
+  
+  .theme.col-1 {
+    background-color: $theme-bk-col;
+    @include query(768px){
+      flex-basis: 8.33%;
+    }
+  }
+  
+  .theme.col-2 {
+    background-color: $theme-col-2;
+    @include query(768px){
+      flex-basis: 16.67%;
+    }
+  }
+  
+  .theme.col-3 {
+    background-color:$theme-col-3;
+    @include query(768px){
+      flex-basis: 25.00%;
+    }
+  }
+  
+  .theme.col-4 {
+    background-color: #7ee6fd;
+    @include query(768px){
+      flex-basis: 33.33%;
+    }
+  }
+  
+  .theme.col-5 {
+    background-color: #88d9a0;
+    @include query(768px){
+      flex-basis: 41.67%;
+    }
+  }
+  
+  .theme.col-6 {
+    background-color: #4da2bb;
+    @include query(768px){
+      flex-basis: 50.00%;
+    }
+  }
+  
+  .theme.col-7 {
+    background-color: #ec9fa3;
+    @include query(768px){
+      flex-basis: 58.33%;
+    }
+  }
+  
+  .theme.col-8 {
+    background-color: #fd9f85;
+    @include query(768px){
+      flex-basis: 66.67%;
+    }
+  }
+  
+  .theme.col-9 {
+    background-color: $err-bk-col;
+    @include query(768px){
+      flex-basis: 75.00%
+    }
+  }
+  
+  .theme.col-10 {
+    background-color: #63cc82;
+    @include query(768px){
+      flex-basis: 83.33%;
+    }
+  }
+  
+  .theme.col-11 {
+    background-color: #51ddfc;
+    @include query(768px){
+      flex-basis: 91.67%;
+    }
+  }
+  
+  .theme.col-12 {
+    background-color: #80e8d1;
+    @include query(768px){
+      flex-basis: 100%;
+    }
+  }
+  
+  .card {
+    flex-basis: 100%;
+    @include query(768px){
+     
+    }
+  }

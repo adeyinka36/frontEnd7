@@ -1,0 +1,16 @@
+$head-pri-col:#58e1c1;
+$theme-bk-col:#927bc1;
+$theme-col-2:#fd7856;
+$theme-col-3:#deb2ee;
+$err-bk-col:#e4757a;
+$theme-col-5:#deb2;
+
+$buttons: (
+  '.default': $head-pri-col,
+  '.error': $theme-bk-col, 
+  '.info': $theme-col-2,
+  '.success': $theme-col-5,
+  '.warning': $err-bk-col,
+ );
+
+$media:768px;

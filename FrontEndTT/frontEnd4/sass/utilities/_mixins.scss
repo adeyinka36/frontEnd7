@@ -1,0 +1,5 @@
+@mixin query($vaue){
+    @media(min-width: $vaue){
+       @content;
+    }
+}

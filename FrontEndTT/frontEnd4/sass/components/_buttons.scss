@@ -1,0 +1,56 @@
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include query(768px){
+      padding: 10px 30px;
+    }
+  }
+  
+  @include query(768px){
+    .btn + .btn {
+      margin-left: 10px;
+    }
+  }
+  .default {
+    background-color: #51ddfc;
+  }
+  
+  .error {
+    background-color: $err-bk-col;
+  }
+  
+  .info {
+    background-color: $theme-bk-col;
+  }
+  
+  .success {
+    background-color: #63cc82;
+  }
+  
+  .warning {
+    background-color: $theme-col-2;
+  }
+  
+  @include query(768px){
+    .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+
+
+@each $button, $col in $buttons {
+  #{$button} {
+    background-color: $col;
+    transition: 0.3s ease-in;
+  }
+  #{$button}:hover {
+    background-color: lighten($col, 15%);
+  }
+}

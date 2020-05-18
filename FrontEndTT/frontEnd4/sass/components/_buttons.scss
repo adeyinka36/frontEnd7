@@ -50,7 +50,11 @@
     background-color: $col;
     transition: 0.3s ease-in;
   }
-  #{$button}:hover {
-    background-color:lighten($col, 15%);
-  }
+  
+}
+
+@each $button, $col in $buttons{
+#{$button}:hover {
+  background-color:lighten($col, 15%);
+}
 }

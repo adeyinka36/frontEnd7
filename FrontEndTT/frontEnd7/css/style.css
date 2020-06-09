@@ -20,6 +20,8 @@
 }
 .right{
     width: 92vw;
+    height:1000vh;
+
 }
 
 .profilePicDiv{
@@ -82,6 +84,7 @@ img{
     display:flex;
     flex-direction: column;
     align-items:  center;
+    height: 500vh;
 }
 
 .left img{
@@ -157,12 +160,17 @@ img{
 .cancel-alert:hover{
     cursor: pointer;
 }
+.canvasDiv{
+    width:92vw;
+    
+}
 
 
 .canvasTitle{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 .canvasTitle span{
     margin-left: 1rem;
@@ -181,7 +189,7 @@ li{
     list-style: none;
     display: inline-block;
     width:auto;
-    background-color:rgba(0,255,0,0 );
+    background-color:lightblue;
     border-radius: 20%;
     padding:.5rem;
     
@@ -194,4 +202,139 @@ li:hover{
 
 li:active{
     background-color:lightskyblue;
+}
+
+
+
+.barChartDiv,.roundChartDiv{
+    width:50%;
+    
+}
+
+.smallCharts{
+    display: flex;
+    height: auto;
+
+}
+h3{
+    padding:1rem;
+    border-top: 1px solid lightgray;
+}
+.roundChartDiv{
+    border-left: 1px solid lightgray;
+    text-align: center;
+}
+#myChartPie,#myChartbar{
+    height:300px;
+}
+
+.mobile-header{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.SVG{
+    
+    height: auto;
+    background-color:blue;
+    
+    height:3rem;
+    width: 3rem;
+    
+}
+.socialsSvg{
+     display: flex;
+    justify-content: space-around;
+    width: 100%;  
+    border-bottom:1px solid lightblue;
+    padding-bottom:3rem;
+}
+
+.outer-span{
+    display: inline-block;
+    width: 27%;
+    height: 10rem;
+    text-align: center;
+    padding-top:2rem;
+    
+    border: 1px solid lightblue;
+}
+.inner-span{
+    display: inline-block;
+    padding:1rem;
+    border:solid blue;
+    border-radius: 50%;
+    background-color: blue;
+
+}
+.images{
+    display: inline-block;
+   padding: 1rem;
+   fill:white;
+    
+ 
+}
+.text{
+    display:inline-block;
+    margin-left: 1rem;
+}
+.facebook{
+  
+    top:51.6rem;
+    left:27.3rem;
+
+}
+
+
+
+.members{
+    width:100%;
+    height:50vh;
+    display: flex;
+}
+.act-mems{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.members p{
+    display: inline-block;
+    width: auto;
+}
+.member-details{
+    display: flex;
+    justify-content: flex-start;
+   
+    
+    
+}
+.member-details p{
+    display: inline-block;
+    width: auto;
+    
+}
+
+.name-email{
+   display: flex;
+   flex-direction: column;
+}
+.date{
+    margin-left: auto;
+    margin-right:1rem;
+}
+
+.member-details img{
+    margin-right:1rem;
+    margin-left: 1rem;
+}
+
+.mem-rec{
+    margin-top:2rem;
+    margin-left:2rem;
+}
+
+.right-mems{
+    border-right:1px solid lightblue;
 }

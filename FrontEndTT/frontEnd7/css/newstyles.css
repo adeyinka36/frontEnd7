@@ -551,24 +551,19 @@ body{
 
 /* media queries */
 
-@media(max-width:1050px){
     .num{
         font-size:1rem ;
     }
     
-}
 
 
-@media(max-width:931px){
+
     .last-right button{
         width:100%;
     }
     
-}
 
 
-
-@media(max-width:850px){
    
  
   .container{
@@ -649,10 +644,10 @@ body{
     .left{
         height:233% ;
     }
-}
 
 
-@media(max-width:320px){
+
+
     .right{
         width: 90vw;
         
@@ -707,7 +702,7 @@ body{
        max-width:88vw;
    }
    .top{
-       width: 105vw;
+       width: 103vw;
    }
    .profilePicDiv span{
      font-size: .5rem;
@@ -715,4 +710,14 @@ body{
    .left{
        height:400%
    }
+
+   .canvasTitle{
+       width:85vw;
+   }
+   .last-left,.last-right{
+       width: 90vw;
+   }
+#profPub{
+ 
+    margin-right: 2rem;
 }

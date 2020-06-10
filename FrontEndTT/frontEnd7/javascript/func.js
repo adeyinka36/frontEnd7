@@ -5,17 +5,30 @@ const weekly=document.getElementById("weekly");
 const hourly=document.getElementById('hourly');
 const monthly=document.getElementById("monthly");
 const periods= document.getElementsByClassName("periods");
+const userSearchButton=document.getElementById("user-search-button");
+const userSearch=document.getElementById("user-search");
+const mememail=document.getElementsByClassName('mememail');
+const toggle=document.getElementsByClassName("toggle");
+const container= document.getElementsByClassName('container')[0];
+const save= document.getElementsByClassName("save")[0];
+const cancelStorage= document.getElementsByClassName("cancel")[0];
+const toggleNot= document.getElementById("toggleNot");
+const sendEmail= document.getElementById('sendEmail');
+const togglePub = document.getElementById("togglePub");
+const proPub= document.getElementById("profPub");
+
+
 
 for(let i=0;i<periods.length;i++){
     let theperiods= document.getElementsByClassName("periods");
     let currperr=theperiods[i];
     currperr.addEventListener("click",(e)=>{
-        theperiods[0].style.backgroundColor="lightblue";
-        theperiods[1].style.backgroundColor="lightblue";
-        theperiods[2].style.backgroundColor="lightblue";
-        theperiods[3].style.backgroundColor="lightblue";
+        theperiods[0].style.backgroundColor="white";
+        theperiods[1].style.backgroundColor="white";
+        theperiods[2].style.backgroundColor="white";
+        theperiods[3].style.backgroundColor="white";
 
-        e.target.style.backgroundColor="darkblue"
+        e.target.style.backgroundColor="lightgreen"
        if(e.target.innerText==="Daily"){
         renderPeriod(dailyLabels,dailyData)
        }
@@ -53,7 +66,15 @@ function renderPeriod(label,data){
     lineChart.update()
 }
 window.onload=()=>{
-    daily.click()
+    daily.click();
+    if(localStorage.getItem("emailNotification")==="off"){
+        toggleNot.click();
+        
+    }
+    if(localStorage.getItem("public")==="off"){
+        togglePub.click();
+        console.log("jkl;m")
+    }
 }
 
 
@@ -139,3 +160,130 @@ let roundChart=new Chart("myChartPie",{
     }
 })
 
+
+for(let i=0;i<mememail.length;i++){
+    userSearch.value="";
+    let curr= mememail[i];
+    curr.addEventListener("click",(e)=>{
+     userSearch.value= e.currentTarget.firstElementChild.nextElementSibling.firstElementChild.innerText;
+    })
+}
+let value=0;
+let value2=0
+toggle[0].addEventListener("click",(e)=>{
+      value+=180;
+      
+      if(e.target.tagName==="I"){
+      e.target.style.transform=`rotate(${value}deg)`;
+      if(e.target.nextElementSibling.innerText==="ON"){
+        e.target.nextElementSibling.innerText="OFF"
+      }
+      else{
+        e.target.nextElementSibling.innerText="ON"
+      }
+     
+      }
+    })
+
+    toggle[1].addEventListener("click",(e)=>{
+      
+        value2+=180;
+       if(e.target.tagName==="I"){
+       e.target.style.transform=`rotate(${value2}deg)`;
+       if(e.target.nextElementSibling.innerText==="ON"){
+         e.target.nextElementSibling.innerText="OFF"
+       }
+       else{
+         e.target.nextElementSibling.innerText="ON"
+         
+       }
+      
+       }
+     })
+
+
+
+
+userSearchButton.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+    if(!userSearch.value){
+        return window.alert("Please enter an user to message")
+    }
+    else{
+        userSearch.value="";
+        window.alert("message sent")
+    }
+})
+
+
+userSearch.addEventListener("keyup",(e)=>{
+    let divTo=document.getElementsByClassName("last-left")[0];
+    let auto=[];
+    let names=document.getElementsByClassName('personName');
+    for(let i=0;i<names.length;i++){
+     let cur= names[i].innerText.toLowerCase();
+     if(cur.includes(userSearch.value)){
+         
+         auto.push(names[i])
+     }
+    }
+
+    const house=document.createElement("DIV");
+    house.id="house";
+    
+    
+     const listItems= auto.map(item=>`<p class=searchRes>${item.innerText}</p>`);
+     if(userSearch.value&&auto.length){
+    for(let i=0;i<auto.length;i++){
+        let myNode= document.createElement("P");
+        myNode.innerText=auto[i].innerText;
+        myNode.className="searchRes";
+        house.appendChild(myNode);
+    }
+}
+    if(document.getElementById("house")){
+        document.getElementById("house").remove();
+    }
+    
+    
+     divTo.appendChild(house);
+    
+     const options=document.getElementsByClassName("searchRes");
+     for(let i=0;i<options.length;i++){
+         let curr= options[i];
+         curr.addEventListener("click",(e)=>{
+          userSearch.value="";
+          userSearch.value= e.target.innerText;
+          house.style.display="none"
+         })
+     }
+
+
+
+
+})
+
+container.addEventListener("click",(e)=>{
+if(document.getElementById("house")){
+    document.getElementById("house").remove();
+}
+}
+)
+
+
+save.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let emailNotification= sendEmail.innerText.toLowerCase();
+    let public = proPub.innerText.toLowerCase();
+
+    localStorage.setItem("emailNotification",emailNotification);
+    localStorage.setItem("public",public);
+
+    
+  
+})
+
+cancelStorage.addEventListener("click",()=>{localStorage.clear()});
+
+  

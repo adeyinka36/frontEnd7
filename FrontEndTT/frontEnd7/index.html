@@ -6,10 +6,12 @@
         <meta name="veiwport" content="width=device-width scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="dashboard">
             <div class="top">
               <span class="app-name">Analytics</span>
               <!-- <svg src="icons/icon-bell.svg"></svg> -->
@@ -24,10 +26,10 @@
              
             </div>
             <div class="left">
-                <img src="icons/icon-dashboard.svg">
-                <img src="icons/icon-members.svg">
-                <img src="icons/icon-visits.svg">
-                <img src="icons/icon-settings.svg">
+                <a href="#dashboard"><img src="icons/icon-dashboard.svg"></a>
+                <a href="#members"><img src="icons/icon-members.svg"></a>
+                <a href="#visits"><img src="icons/icon-visits.svg"></a>
+                <a href="#settings"><img src="icons/icon-settings.svg"></a>
 
             </div>
             <div class="right">
@@ -52,7 +54,7 @@
                       </ul>
                     </div>
                <div class="canvasDiv"><canvas id="myChart" width="750" height="300"></canvas></div>
-               <div class="smallCharts">
+               <div class="smallCharts" id="visits">
                <div class="barChartDiv">
                <h3>Daily Traffic</h3>
                <canvas id="myChartBar" ></canvas>
@@ -68,7 +70,7 @@
                   
                     <span class="outer-span">
                         
-                    <span class="inner-span">
+                    <span class="inner-span leftspan">
                     <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="SVG">
@@ -80,23 +82,23 @@
                     </svg>
                     </span>
                         <div class="text">
-                            <p>Twitter</p>
-                            <p>10,4000</p>
+                            <p class="twitter">Twitter</p>
+                            <p class="num">10,400</p>
                         </div>
                     </span>
                     
                     <span class="outer-span facebook">
-                    <span class="inner-span">
+                    <span class="inner-span midspan">
                     <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="green" class="images" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z" class="SVG"/></svg>
                     </span>
                         <div class="text">
-                            <p>Twitter</p>
-                            <p>10,4000</p>
+                            <p class="twitter">Faceook</p>
+                            <p class="num">15,500</p>
                         </div>
                     </span>
 
                     <span class="outer-span">
-                    <span class="inner-span">
+                    <span class="inner-span rightspan">
                     <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="SVG">
@@ -119,51 +121,51 @@
                     </svg>
                     </span>
                         <div class="text">
-                            <p>Twitter</p>
-                            <p>10,4000</p>
+                            <p class="twitter">Google</p>
+                            <p class="num">12,400</p>
                         </div>
                     </span>
 
 
                </div>
-               <div class="members">
+               <div class="members" id="members">
                 
                      <div class="act-mems right-mems">
                          <div class="mem-rec">NEW MEMBERS</div>
                          
-                         <div class="member-details">
-                            <img >
+                         <div class="member-details mememail">
+                            <img src="images/member-1.jpg">
                             <div class="name-email">
-                            <p>Victoria Chambers</p>
-                            <p>vic.chambers@example.com</p>
+                            <p class="personName">Victoria Chambers</p>
+                            <p class="user-email">vic.chambers@example.com</p>
                             </div>
                             <p class="date">10/15/15</p>
                         </div>
                         
-                        <div class="member-details">
-                            <img >
+                        <div class="member-details mememail">
+                            <img src="images/member-2.jpg" >
                             <div class="name-email">
-                            <p>Victoria Chambers</p>
-                            <p>vic.chambers@example.com</p>
+                            <p class="personName"> Dale Byrd</p>
+                            <p class="user-email">dale.byrd52@example.com</p>
                             </div>
                             <p class="date">10/15/15</p>
                         </div >
                         
-                        <div class="member-details">
-                            <img >
+                        <div class="member-details mememail">
+                            <img src="images/member-3.jpg">
                             <div class="name-email">
-                            <p>Victoria Chambers</p>
-                            <p>vic.chambers@example.com</p>
+                            <p class="personName">Dawn Wood</p>
+                            <p class="user-email">dawn.wood16@example.com</p>
                             </div>
                             <p class="date">10/15/15</p>
                         </div>
                        
                         
-                        <div class="member-details">
-                            <img >
+                        <div class="member-details  mememail mem4">
+                            <img src="images/member-4.jpg">
                             <div class="name-email">
-                            <p>Victoria Chambers</p>
-                            <p>vic.chambers@example.com</p>
+                            <p class="personName">Dan Oliver</p>
+                            <p class="user-email">Dan.oliver82@example.com</p>
                             </div>
                             <p class="date">10/15/15</p>
                         </div>
@@ -175,58 +177,119 @@
                         
                  </div>
                  
-                     <div class="act-mems">
+                     <div class="act-mems" id="settings">
                          <div class="mem-rec">RECENT ACTIVITY</div>
                          
                             <div class="member-details">
-                                <img >
+                                <img src="images/member-1.jpg">
                                 <div class="name-email">
-                                <p>Victoria Chambers</p>
-                                <p>vic.chambers@example.com</p>
+                                <p>Victoria Chambers liked alex's post</p>
+                                <p>4 hours ago</p>
                                 </div>
-                                <p class="date">&gt;</p>
+                                <p class="date"><i class="fas fa-chevron-right"></i></p>
                             </div>
                            
                             
                             <div class="member-details">
-                                <img >
+                                <img src="images/member-2.jpg">
                                 <div class="name-email">
-                                <p>Victoria Chambers</p>
-                                <p>vic.chambers@example.com</p>
+                                <p>Dale Byrd liked victorias post</p>
+                                <p>2 hours ago</p>
                                 </div>
-                                <p class="date">&gt;</p>
+                                <p class="date"><i class="fas fa-chevron-right"></i></p>
                             </div>
                            
                             
                             <div class="member-details">
-                                <img >
+                                <img src="images/member-3.jpg">
                                 <div class="name-email">
-                                <p>Victoria Chambers</p>
-                                <p>vic.chambers@example.com</p>
+                                <p>Dan Wood commented </p>
+                                <p>1 hour ago</p>
                                 </div>
-                                <p class="date">&gt;</p>
+                                <p class="date"><i class="fas fa-chevron-right"></i></p>
                             </div>
                            
                             
-                            <div class="member-details">
-                                <img >
+                            <div class="member-details mem4">
+                                <img src="images/member-4.jpg">
                                 <div class="name-email">
-                                <p>Victoria Chambers</p>
-                                <p>vic.chambers@example.com</p>
+                                <p>Dan Oliver is now friedns with Mike</p>
+                                <p>30 mins ago</p>
                                 </div>
-                                <p class="date">&gt;</p>
+                                <p class="date"><i class="fas fa-chevron-right"></i></p>
                             </div>
                            
                         
                          
                  </div>
                </div>
-               <div></div>
-               <div></div>
+            <div class="last-div">
+               <div class="last-left">
+                  <h4>MESSAGE USER</h4>
+                  <form>
+                      <input type="text" placeholder="Search for User" id="user-search">
+                
+                      <textarea placeholder="Message for User" id="user-search-textarea"></textarea>
+                      <button type="submit" id="user-search-button">SEND</button>
+                  </form>
+               </div>
+               <div class="last-right">
+                   <h4>SETTINGS</h4>
+                   <div class="send-notif">
+                       <p>Email Notification</p>
+                       <span class="toggleDiv">
+                       <i class="fa fa-toggle-on toggle"id="toggleNot" ></i>
+                       <P id="sendEmail">ON</P>
+                       </span>
+                   </div>
+                   <div class="send-notif">
+                       <p>Set Profile to Public</p>
+                       <span class="toggleDiv">
+                       <i class="fa fa-toggle-on toggle" id="togglePub"></i>
+                       <p id="profPub">ON</p>
+                       </span>
+                   </div>
+                   <select >
+                   <option value=""">Select Timezone</option>
+                   <option value="Etc/GMT+12">(GMT-12:00) International Date Line West</option>
+                    <option value="Pacific/Midway">(GMT-11:00) Midway Island, Samoa</option>
+                    <option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
+                    <option value="US/Alaska">(GMT-09:00) Alaska</option>
+                    <option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US & Canada)</option>
+                    <option value="America/Tijuana">(GMT-08:00) Tijuana, Baja California</option>
+                    <option value="US/Arizona">(GMT-07:00) Arizona</option>
+                    <option value="America/Chihuahua">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                    <option value="US/Mountain">(GMT-07:00) Mountain Time (US & Canada)</option>
+                    <option value="America/Managua">(GMT-06:00) Central America</option>
+                    <option value="US/Central">(GMT-06:00) Central Time (US & Canada)</option>
+                    <option value="America/Mexico_City">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                    <option value="Canada/Saskatchewan">(GMT-06:00) Saskatchewan</option>
+                    <option value="America/Bogota">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                    <option value="US/Eastern">(GMT-05:00) Eastern Time (US & Canada)</option>
+                    <option value="US/East-Indiana">(GMT-05:00) Indiana (East)</option>
+                    <option value="Canada/Atlantic">(GMT-04:00) Atlantic Time (Canada)</option>
+                    <option value="America/Caracas">(GMT-04:00) Caracas, La Paz</option>
+                    <option value="America/Manaus">(GMT-04:00) Manaus</option>
+                    <option value="America/Santiago">(GMT-04:00) Santiago</option>
+                    <option value="Canada/Newfoundland">(GMT-03:30) Newfoundland</option>
+                    <option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option>
+                    <option value="America/Argentina/Buenos_Aires">(GMT-03:00) Buenos Aires, Georgetown</option>
+                    <option value="America/Godthab">(GMT-03:00) Greenland</option>
+                    <option value="America/Montevideo">(GMT-03:00) Montevideo</option>
+                    <option value="America/Noronha">(GMT-02:00) Mid-Atlantic</option>
+                    <option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option>
+                    <option value="Atlantic/Azores">(GMT-01:00) Azores</option>
+                   </select>
+                   <button  class="save">SAVE</button>
+                   <button class="cancel">CANCEL</button>
+
+               </div>
+            </div>
             </div>
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script src="https://kit.fontawesome.com/b9189aabce.js" crossorigin="anonymous"></script>
         <script src="javascript/func.js"></script>
     </body>
 </html>

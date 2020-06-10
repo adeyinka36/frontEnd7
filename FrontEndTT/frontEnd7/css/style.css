@@ -610,6 +610,27 @@ h4{
     .right{
         width: 92vw;
     }
+    .top{
+        width: 97vw;
+    }
+    .search input{
+        margin-left: 7rem;
+    }
+    .canvasTitle{
+        width: 90vw;
+    }
+    #myChart{
+        max-width: 85vw;
+    }
+    .members{
+        width:88vw;
+    }
+    .app-name{
+        font-size: 1.5rem;
+    }
+    .left{
+        height:233% ;
+    }
 }
 
 

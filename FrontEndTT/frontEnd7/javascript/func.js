@@ -16,6 +16,8 @@ const toggleNot= document.getElementById("toggleNot");
 const sendEmail= document.getElementById('sendEmail');
 const togglePub = document.getElementById("togglePub");
 const proPub= document.getElementById("profPub");
+const notificationDot= document.getElementById("notification-dot");
+const bell= document.getElementsByClassName("profSvg")[0];
 
 
 
@@ -285,5 +287,45 @@ save.addEventListener("click",(e)=>{
 })
 
 cancelStorage.addEventListener("click",()=>{localStorage.clear()});
+
+bell.addEventListener("click",(e)=>{
+    const dropdown=document.createElement("DIV");
+    dropdown.className="dropdown";
+    const notificationsLi= document.createElement("P");
+    notificationsLi.className="drop-item";
+    const notificationsLi2=document.createElement("P");
+    notificationsLi2.className="drop-item";
+
+    const cancelModal= document.createElement('P');
+    const can = document.createTextNode("X");
+    cancelModal.className="drop-item";
+    cancelModal.classList.add("cancelStyle");
+    cancelModal.appendChild(can);
+
+
+    const notificationText=document.createTextNode("You have a message!");
+    const notificationText2=document.createTextNode("Your account is activated!");
+
+    notificationsLi.appendChild(notificationText);
+    notificationsLi2.appendChild(notificationText2)
+
+    dropdown.appendChild(notificationsLi);
+    dropdown.appendChild(notificationsLi2);
+    dropdown .appendChild(cancelModal);
+
+    cancelModal.addEventListener("click",()=>{
+        dropdown.style.display="none";
+    })
+
+
+    bell.src="icons/dot.svg";
+  
+   document.getElementsByClassName("search")[0].appendChild(dropdown);
+
+
+    
+
+
+})
 
   

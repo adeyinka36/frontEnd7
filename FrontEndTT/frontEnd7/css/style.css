@@ -16,7 +16,7 @@ body{
     width:100vw;
     display:grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows:10vh 140vh 140vh;
+   
     
     
 }
@@ -69,7 +69,9 @@ img{
     margin-right: 1%;
     
 }
+
 .profSvg{
+    position: relative;
     margin-top: .5rem;
     margin-right: 1rem;
     margin-left: auto;
